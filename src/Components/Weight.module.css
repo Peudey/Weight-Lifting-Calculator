@@ -1,0 +1,43 @@
+.fifty {
+  width: 60vw;
+  height: 6vh;
+  margin: 0 auto;
+  background-color: gray;
+  color: white;
+  border: 0.1rem solid black;
+  border-radius: 2.5vh;
+  line-height: 6vh;
+}
+
+.thirtyFive {
+  width: 50vw;
+  height: 5vh;
+  margin: 0 auto;
+  background-color: gray;
+  color: white;
+  border: 0.1rem solid black;
+  border-radius: 2.5vh;
+  line-height: 5vh;
+}
+
+.twentyFive {
+  width: 40vw;
+  height: 4vh;
+  margin: 0 auto;
+  background-color: gray;
+  color: white;
+  border: 0.1rem solid black;
+  border-radius: 2.5vh;
+  line-height: 4vh;
+}
+
+.ten {
+  width: 25vw;
+  height: 3vh;
+  margin: 0 auto;
+  background-color: gray;
+  color: white;
+  border: 0.1rem solid black;
+  border-radius: 2vh;
+  line-height: 3vh;
+}
