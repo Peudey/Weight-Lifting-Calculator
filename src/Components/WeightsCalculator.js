@@ -31,31 +31,43 @@ class WeightCalculator extends Component {
     this.setState({
       weights: weights,
       totalWeights: this.state.totalWeights,
-      weight: this.weight.value,
+      weight: this.weight.value - currentWeight,
       barWeight: this.barWeight.value,
     });
   };
-  handleChange = (e) => {};
+
   render() {
     return (
       <>
         <div className={Styles.WeightCalculator}>
           <Weights weights={this.state.weights} />
         </div>
-        <input
-          type="text"
-          placeholder="Weight"
-          ref={(input) => (this.weight = input)}
-        />
-        <input
-          type="text"
-          placeholder="Bar Weight"
-          ref={(input) => (this.barWeight = input)}
-        />
-        <p>{this.state.weight}</p>
-        <p>{this.state.barWeight}</p>
+        <span>
+          <p>Weight: {this.state.weight}</p>
 
-        <button onClick={this.weightCalculate}>Calculate</button>
+          <div>
+            <input
+              type="text"
+              placeholder="Weight"
+              ref={(input) => (this.weight = input)}
+            />
+            <input
+              type="text"
+              placeholder="Bar Weight"
+              ref={(input) => (this.barWeight = input)}
+            />
+            <button onClick={this.weightCalculate}>Calculate</button>
+          </div>
+          <div className={Styles.totals}>
+            {Object.keys(this.state.weights).map((key) => {
+              return (
+                <li key={key}>
+                  {key} lbs X: {this.state.weights[key]}
+                </li>
+              );
+            })}
+          </div>
+        </span>
       </>
     );
   }

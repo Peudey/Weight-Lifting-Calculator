@@ -1,5 +1,6 @@
 import React from "react";
 import Weight from "./Weight";
+import Styles from "./Weights.module.css";
 
 const Weights = (props) => {
   let totalWeights = Object.keys(props.weights)
@@ -16,7 +17,11 @@ const Weights = (props) => {
     totalWeights = <p>Please Enter a Weight</p>;
   }
 
-  return <div>{totalWeights}</div>;
+  return (
+    <div className={Styles.weights}>
+      <span>{totalWeights}</span>
+    </div>
+  );
 };
 
 export default Weights;
