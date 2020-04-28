@@ -8,6 +8,7 @@ class WeightCalculator extends Component {
     totalWeights: { 50: 2, 35: 2, 25: 4, 10: 6 },
     weight: 0,
     barWeight: 0,
+    showWeight: false,
   };
 
   weightCalculate = (e) => {
@@ -34,6 +35,10 @@ class WeightCalculator extends Component {
       weight: this.weight.value - currentWeight,
       barWeight: this.barWeight.value,
     });
+  };
+
+  toggleWeights = () => {
+    this.setState({ showWeight: !this.state.showWeight });
   };
 
   render() {
@@ -66,6 +71,18 @@ class WeightCalculator extends Component {
                 </li>
               );
             })}
+          </div>
+          <div className={Styles.plateDropdown}>
+            <div className={this.state.showWeight ? Styles.out : Styles.in}>
+              {Object.keys(this.state.totalWeights).map((key) => {
+                return (
+                  <li key={key}>
+                    {key} lbs: {this.state.totalWeights[key]}
+                  </li>
+                );
+              })}
+            </div>
+            <button onClick={this.toggleWeights}>v</button>
           </div>
         </span>
       </>
