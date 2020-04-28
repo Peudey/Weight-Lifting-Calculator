@@ -3,10 +3,11 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #383841;
   min-height: 10vh;
   width: 100%;
   display: flex;

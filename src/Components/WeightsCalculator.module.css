@@ -1,0 +1,30 @@
+.WeightCalculator {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  overflow: auto;
+  height: 60vh;
+  width: 80vw;
+  padding: 12px;
+}
+
+.userIn input {
+  width: 10vw;
+  min-width: 100px;
+}
+
+.totals {
+  display: inline-flex;
+  min-width: 330px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 6px 6px grey;
+}
+
+.totals li {
+  display: inline-block;
+  padding: 8px;
+  text-align: left;
+  border: 2px solid rgb(182, 182, 182);
+}

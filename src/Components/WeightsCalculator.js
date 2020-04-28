@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Weights from "./Weights";
-import Styles from "./WeightCalculator.module.css";
+import Styles from "./WeightsCalculator.module.css";
 
 class WeightCalculator extends Component {
   state = {
@@ -45,7 +45,7 @@ class WeightCalculator extends Component {
         <span>
           <p>Weight: {this.state.weight}</p>
 
-          <div>
+          <div className={Styles.userIn}>
             <input
               type="text"
               placeholder="Weight"
@@ -62,7 +62,7 @@ class WeightCalculator extends Component {
             {Object.keys(this.state.weights).map((key) => {
               return (
                 <li key={key}>
-                  {key} lbs X: {this.state.weights[key]}
+                  {key} lbs: {this.state.weights[key]}
                 </li>
               );
             })}

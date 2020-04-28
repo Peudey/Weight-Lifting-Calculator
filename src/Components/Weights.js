@@ -18,7 +18,7 @@ const Weights = (props) => {
   }
 
   return (
-    <div className={Styles.weights}>
+    <div className={Styles.Weights}>
       <span>{totalWeights}</span>
     </div>
   );

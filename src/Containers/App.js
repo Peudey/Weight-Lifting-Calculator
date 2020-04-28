@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Weight Calculator Title</p>
+        <p>Weight Lifting Plate Calculator</p>
       </header>
       <WeightCalculator />
     </div>
